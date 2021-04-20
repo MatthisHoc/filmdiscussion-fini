@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 01, 2020 at 10:01 AM
+-- Generation Time: Apr 20, 2021 at 08:18 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -38,14 +38,15 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixcommentaires` (
   PRIMARY KEY (`id`),
   KEY `innodb_large_prefixcommentaires_post_id_foreign` (`post_id`),
   KEY `innodb_large_prefixcommentaires_user_id_foreign` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `innodb_large_prefixcommentaires`
 --
 
 INSERT INTO `innodb_large_prefixcommentaires` (`id`, `date`, `avis`, `post_id`, `user_id`) VALUES
-(2, '2020-11-25', 'je suis d\'accord j\'ai adoré !', 4, 3);
+(2, '2020-11-25', 'je suis d\'accord j\'ai adoré !', 4, 3),
+(3, '2020-12-08', 'tu dis de la crap', 7, 4);
 
 -- --------------------------------------------------------
 
@@ -85,21 +86,17 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixfilm_series` (
   `affiche` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `notes` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `innodb_large_prefixfilm_series`
 --
 
 INSERT INTO `innodb_large_prefixfilm_series` (`id`, `titre`, `date_sortie`, `type`, `nombreEpisode`, `duree`, `resume`, `production`, `affiche`, `notes`) VALUES
-(2, 'John Wick: Chapitre 3 - Parabellum', '2019-05-09', 'film', NULL, 131, 'John Wick est désormais en cavale. Une prime de 14 millions de dollars a été mise sur sa tête car il a tué un membre de la Grande Table. De plus, l\'ayant fait dans les murs du Continental Hotel de New York, il se retrouve excommunié. John peut malgré tout compter sur l\'aide de Winston, le directeur du Continental, qui lui a laissé une heure avant d’être considéré comme banni. John va alors tout faire pour quitter la ville et échapper aux assassins qui le traquent.', 'Lionsgate, Thunder Road Pictures', 'affiches/dgTE94Y6DbrfKJtuZgIsAPhd9v9CdoYaf43FLuTA.webp', 5.00),
-(3, 'The Boys', '2019-07-26', 'serie', 16, NULL, 'The Boys se déroule dans un univers uchronique où des personnages surpuissants sont reconnus comme des super-héros par le grand public et travaillent pour la puissante société Vought International, qui s\'occupe de leur promotion et de leur commercialisation. Bien loin de leur apparence héroïque, la plupart d\'entre-eux sont corrompus et arrogants, voire de dangereux psychopathes.\r\n\r\nLa série se concentre sur deux groupes: les Sept, la première équipe de super-héros de Vought, et les Boys éponymes, des justiciers cherchant à faire tomber Vought et ses super-héros corrompus.\r\n\r\nLes Boys sont dirigés par Billy Butcher, qui méprise tous les super-héros (qu\'il appelle Supes) et les Sept sont dirigés par le Protecteur (Homelander), un psychopathe narcissique et violent. Au début de la série, les Boys sont rejoints par Hughie Campbell après que le membre des Sept A-Train ait accidentellement tué sa petite amie Robin, tandis que les Sept sont rejoints par Annie January (Starlight/Stella), une jeune héroïne pleine d\'espoir et qui va devoir de faire face à la terrible vérité sur ceux qu\'elle admire tant.\r\n\r\nLes autres membres des Sept sont la reine désillusionnée Maeve, le toxicomane A-Train, le déséquilibré homme-poisson (The Deep), le mystérieux Black Noir et la suprémaciste Stormfront, non présente dans la première saison, mais personnage central de la suivante. Les Boys sont complétés par le tacticien La Crème (Mother\'s Milk), le spécialiste des armes Serge dit Le Français/Frenchie et Kimiko, la Fille (the Female) à qui on a injecté contre son gré le \"Composé V\" qui donne tous leurs pouvoirs aux Super-héros. Madelyn Stillwell, cadre de Vought, supervise les Sept, puis le Protecteur l\'assassine et la publiciste Ashley Barrett lui succède.\r\n\r\nLa première saison décrit le conflit entre les Boys et les Sept, motivé par Butcher, pensant que le Protecteur a causé la disparition de sa femme Becca. Alors que le Protecteur et Stillwell conspirent afin d\'obtenir le soutien du gouvernement pour les super-héros, les Boys tentent de les arrêter en découvrant les secrets inavouables de Vought. Hughie et Annie/Stella brouillent le conflit en tombant amoureux l\'un de l\'autre et en entamant une relation intime, malgré la méfiance de Butcher à leur égard.\r\n\r\nDans la deuxième saison, les Boys poursuivent leurs efforts pour vaincre Vought, aidés par Stella. Ils sont devenus des fugitifs recherchés par le gouvernement. Butcher apprend que Vought retient Becca en captivité avec un fils surpuissant dont le père n\'est autre que le Protecteur, qui l\'a violée. Alors que Butcher tente de sauver sa femme, Stormfront dont le passé nazi est révélé, promeut son message de suprématie blanche auprès des Sept et du public, cherchant à faire en sorte que le Protecteur conduise les super-héros à la domination mondiale.', 'Amazon Studios', 'affiches/DMQlIcK0pEbSwCvfCzsFFuzhLdzGxFoCleHoAy5z.jpeg', NULL),
-(4, 'Shutter Island', '2010-02-24', 'film', NULL, 130, 'En 1954, le marshal Teddy Daniels et son coéquipier Chuck Aule sont envoyés enquêter sur l\'île de Shutter Island, dans un hôpital psychiatrique où sont internés de dangereux criminels. L\'une des patientes, Rachel Solando, a inexplicablement disparu. Comment la meurtrière a-t-elle pu sortir d\'une cellule fermée de l\'extérieur ? Le seul indice retrouvé dans la pièce est une feuille de papier sur laquelle on peut lire une suite de chiffres et de lettres sans signification apparente. Oeuvre cohérente d\'une malade, ou cryptogramme ?', 'Paramount Pictures', 'affiches/eYu6RyAjMqkTp93r8kr0b281PWr1ocZGAMNZb3bL.jpeg', 3.50),
-(5, 'American Psycho', '2000-06-07', 'film', NULL, 101, 'Patrick Bateman, 27 ans, flamboyant golden-boy du Wall Street d\'avant le krach d\'octobre 1987, est beau, riche et intelligent, comme tous ses amis. Il fréquente les restaurants les plus chics, où il est impossible d\'obtenir une réservation si l\'on n\'est pas quelqu\'un, va dans les boîtes branchées et sniffe de temps en temps un rail de coke, comme tout bon yuppie.\r\n\r\nMais Patrick a une petite particularité : c\'est un psychopathe. À l\'abri dans son appartement hors de prix, au milieu de ses gadgets dernier cri et de ses meubles en matériaux précieux, il tue, décapite, égorge, viole. Sa haine des pauvres, des homosexuels et des femmes est illimitée, et son humour froid est la seule trace d\'humanité que l\'on puisse lui trouver.', 'Edward R. Pressman Productions, Muse Productions', 'affiches/FgrKqNQWuNnTFuLhayVde8JjIxJ8fcap79vJRtqf.jpeg', NULL),
-(6, 'GTO: Great Teacher Onizuka', '1999-01-01', 'serie', 43, NULL, '1997, Eikichi Onizuka, 22 ans, « célibataire et libre comme l\'air », est un jeune professeur au passé douteux qui est nommé pour son premier poste dans une classe difficile ; il montre rapidement une vision de l\'enseignement totalement décalée avec les pratiques habituelles. Ses réactions anticonformistes et directes, souvent humoristiques, sont l\'axe central de cette série. Il va évoluer avec cette classe, dont la spécialité est de faire craquer moralement leurs professeurs, en tentant de la rallier peu à peu à sa cause.', 'Studio Pierrot', 'affiches/fme3DDiJjQmF8CzNf5FbFCEJHEptDdIteAz3KfZS.jpeg', NULL),
-(7, 'Once Upon A Time... In Hollywood', '2019-07-24', 'film', NULL, 161, '1969, à Hollywood. Le mouvement hippie est à son apogée et se manifeste massivement contre la guerre du Viêt Nam, toujours en cours. Richard Nixon est élu nouveau président des États-Unis, succédant à Lyndon B. Johnson, tandis que les émeutes de Stonewall débouchent sur le militantisme homosexuel.\r\n\r\nUne année charnière dans l\'histoire des États-Unis, également bouleversée par l\'avènement du « Nouvel Hollywood », un mouvement cinématographique qui enterre le cinéma classique hollywoodien, dit le « Vieil Hollywood », et s\'illustre par la prise de pouvoir des réalisateurs au sein des grands studios américains et la représentation radicale de thèmes jusqu\'alors tabous et interdits par le code Hays comme la violence, la sexualité, etc.\r\n\r\nRick Dalton — star déclinante d\'une série télévisée de western — et Cliff Booth — sa doublure de toujours — assistent à la métamorphose artistique d\'un Hollywood qu\'ils ne reconnaissent plus du tout en essayant de relancer leurs carrières. De plus, en plein été, le 9 août, Hollywood sera à jamais marqué par un fait divers barbare : l\'assassinat de l\'actrice Sharon Tate enceinte de huit mois, par les disciples du gourou Charles Manson. Les époux franco-polonais Polanski, et leurs amis, sont montrés habitant une maison voisine de celle de Rick Dalton sur Cielo Drive. Outre le couple Polanski, les personnages du film vont croiser d\'autres personnalités réelles, comme Steve McQueen, Bruce Lee ou Michelle Phillips et Cass Elliot. Quant à Sharon Tate, sera-t-elle réellement assassinée avec ses amis dans sa demeure voisine de celle de Rick Dalton, par les adeptes de la famille Manson ?', 'Columbia Pictures', 'affiches/kzApomVhvvAcsrr74fFmAfCFaNoDdb5s2Y8CDki3.webp', NULL),
-(8, 'Cars', '2006-06-14', 'film', NULL, 116, 'Flash McQueen, jeune véhicule de course avide de succès, rêve d’être le premier rookie de l\'histoire de la compétition automobile à remporter la fameuse Piston Cup, afin d’intégrer l\'écurie Dinoco et de devenir célèbre.', 'Pixar', 'affiches/NYuMyjgirauifCBhpEFH4xcmLEO1x4SEO1Z0woas.jpeg', NULL),
-(9, 'Halloween', '2018-10-17', 'film', NULL, 106, 'Une équipe de podcasteurs britanniques se rend aux États-Unis pour réaliser un reportage sur le massacre perpétré par le psychopathe Michael Myers lors de la nuit d\'Halloween en 1978. Le reportage prend soudain une tournure macabre lorsque Myers parvient à s\'évader lors d\'un transfert vers un nouvel asile psychiatrique1. Sa seule préoccupation est de se venger de Laurie Strode, la survivante du massacre. Après le traumatisme qu\'elle a vécu il y a quarante ans, Laurie se prépare au retour de Michael Myers, négligeant ainsi sa fille, Karen, et sa petite-fille, Allyson, dans le but d\'affronter une ultime fois le désormais célèbre tueur d\'Halloween.', 'Blumhouse Productions, Miramax, Rough House Pictures, Trancas International Films', 'affiches/BPMNTkbpmirrfqCqZlpMrrb3iQFDHotWEA66tlaB.webp', NULL);
+(10, 'Rasta Rockett', '1994-04-13', 'film', NULL, 108, 'L\'histoire véridique de quatre Jamaïcains qui ont un rêve fou : obtenir une médaille d\'or dans une discipline olympique qui leur est totalement inconnue et impossible à pratiquer chez eux : le bobsleigh !', 'Walt Disney Pictures', 'affiches/IZfIr8PoAmRY9oUOkEwiFkUP69X18efUsVlYsml3.jpeg', 4.00),
+(11, 'Creed : L\'Héritage de Rocky Balboa', '2016-01-13', 'film', NULL, 134, 'Adonis Johnson n\'a jamais connu son père, le célèbre champion du monde poids lourd Apollo Creed décédé avant sa naissance. Pourtant, il a la boxe dans le sang et décide d\'être entraîné par le meilleur de sa catégorie. À Philadelphie, il retrouve la trace de Rocky Balboa, que son père avait affronté autrefois, et lui demande de devenir son entraîneur. D\'abord réticent, l\'ancien champion décèle une force inébranlable chez Adonis et finit par accepter…', 'Chartoff-Winkler Productions', 'affiches/bYd5rg8yFBjc4hvOavleTvUO2lFvkoYIvtY0R1oE.jpeg', 5.00),
+(12, 'The Last Dance', '2020-04-20', 'serie', 10, NULL, 'A travers des images d\'archives inédites, cette série documentaire en dix épisodes suit de l\'intérieur la saison 1997-1998 des Chicago Bulls en route vers leur sixième titre en huit ans, et propose un portrait sportif et intime de Michael Jordan.', 'Michael Tollin', 'affiches/9Mfjdm4YQukiKNnjc0sKFJNbUyGvdvn3fsQul4rd.jpeg', 5.00),
+(13, 'Coach Carter', '2005-08-17', 'film', NULL, 136, 'L\'histoire vraie de Ken Carter, l\'entraîneur de basket d\'une équipe de lycée, qui devint célèbre en 1999 après avoir renvoyé ses joueurs à leurs chères études, déclarant forfait deux matchs de suite alors que l\'équipe était invaincue, parce que ces derniers n\'avaient pas obtenu des résultats scolaires suffisants.', 'MTV Films', 'affiches/2wXQdsjkJOPZXPr5l01HTw4wllbQa5AxSoZMvd6v.jpeg', 3.00);
 
 -- --------------------------------------------------------
 
@@ -216,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixnotifications` (
   PRIMARY KEY (`id`),
   KEY `innodb_large_prefixnotifications_user_id_foreign` (`user_id`),
   KEY `innodb_large_prefixnotifications_commentaire_id_foreign` (`commentaire_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `innodb_large_prefixnotifications`
@@ -225,7 +222,8 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixnotifications` (
 INSERT INTO `innodb_large_prefixnotifications` (`id`, `titre`, `contenu`, `lu`, `type`, `user_id`, `commentaire_id`) VALUES
 (3, 'Un administrateur a supprimé l\'un de vos messages', 'Réalisation et casting au poil. On ne s\'ennuie jamais et la créativité des chorégraphies nous laisse sans voix pendant deux heures.', 1, 'suppression', 2, NULL),
 (6, 'Un administrateur a supprimé l\'un de vos messages', 'azerty', 0, 'suppression', 2, NULL),
-(7, 'superman29 a commenté votre post!', '', 0, 'commentaire', 2, 2);
+(7, 'superman29 a commenté votre post!', '', 0, 'commentaire', 2, 2),
+(8, 'connard a commenté votre post!', '', 0, 'commentaire', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -259,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixposts` (
   PRIMARY KEY (`id`),
   KEY `innodb_large_prefixposts_film_serie_id_foreign` (`film_serie_id`),
   KEY `innodb_large_prefixposts_user_id_foreign` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `innodb_large_prefixposts`
@@ -309,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixusers` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `innodb_large_prefixusers_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `innodb_large_prefixusers`
@@ -318,7 +316,8 @@ CREATE TABLE IF NOT EXISTS `innodb_large_prefixusers` (
 INSERT INTO `innodb_large_prefixusers` (`id`, `username`, `email`, `password`, `role_id`, `created_at`, `updated_at`) VALUES
 (1, 'prout', 'proutman@zizi3.com', '$2y$10$pn4RpKysWRsbWU8Pg9Vs7uBI4E3iSWbtdhph0UWgJd0ogJQ/s5fGa', 1, '2020-11-17 10:25:56', '2020-11-17 10:25:56'),
 (2, 'azerty23', 'azerty@123.com', '$2y$10$PooIy9F52SUL6GjWpWKW9OihJi67ieXN8O4ICVGZUvNSGG3dJYG82', 2, '2020-11-17 10:26:48', '2020-11-17 10:26:48'),
-(3, 'superman29', 'proutman@zizi2.com', '$2y$10$QhaMmJuQ4WNRZjpB9lK9ZuqzH7d.CMSSSKOqR/wEVMbkpTLXMxhqS', 2, '2020-11-25 09:15:54', '2020-11-25 09:15:54');
+(3, 'superman29', 'proutman@zizi2.com', '$2y$10$QhaMmJuQ4WNRZjpB9lK9ZuqzH7d.CMSSSKOqR/wEVMbkpTLXMxhqS', 2, '2020-11-25 09:15:54', '2020-11-25 09:15:54'),
+(4, 'connard', 'cabugpas@gmail.com', '$2y$10$5VChtLQYSHuDCRDK68k0pe2w6d7EAIJ0M3WDhLNUoRytL6mPhOzLu', 2, '2020-12-08 13:41:00', '2020-12-08 13:41:00');
 
 --
 -- Constraints for dumped tables
